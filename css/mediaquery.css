@@ -1,0 +1,149 @@
+:root {
+    --primary: #b6895b;
+    --bg: #010101;
+}
+#hamburger-menu {
+    display: none;
+}
+/* media queries */
+/* laptop */
+@media(max-width:1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+/* tablet */
+@media(max-width:768px) {
+    html {
+        font-size: 62.5%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+    /* navbar */
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #010101c0;
+        width: 21rem;
+        height: 100vh;
+        transition: all ease-in-out 0.4s;
+    }
+    .navbar .navbar-nav.active {
+        right: 0;
+        border-left: 0.1rem solid var(--primary);
+    }
+    .navbar .navbar-nav a{
+        color: var(--primary);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.2);
+    }
+    .navbar .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+    /* shopping cart */
+    .shopping-cart {
+        width: 28rem;
+    }
+    .shopping-cart .remove-item {
+     padding: 0.3rem;   
+    }
+
+    
+    /* about */
+    .about .row {
+        flex-wrap: wrap;
+    }
+    .about .row .about-img  img{
+        height: 24rem;
+        object-fit: cover;
+        object-position:center;
+    }
+    .about .row .content {
+        padding: 0;
+    }
+    .about .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .about .row .content p {
+        font-size: 1.5;
+    }
+
+    /* produk section */
+    .produk p{
+        font-size: 1.2rem;
+    }
+    .produk .row .produk-card img {
+        width: 60%;
+    }
+    /* contact section */
+    .contact .row {
+        flex-wrap: wrap;
+    }
+    .contact .row .map {
+        height: 30rem;
+    }
+    .contact .row form {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    /* product unggulan section */
+    .products .product-icon a {
+        padding: 0.5;
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    .products .product-img img {
+        height: 25rem;
+    }
+    .products .product-content h3 {
+        font-size: 1.8rem;
+    }
+    .products .product-stars {
+        font-size: 0.6rem;
+        gap: 1rem;  
+    }
+     .products .product-price {
+        font-size: 1.5rem;
+    }
+    .products .product-price span {
+        font-size: 1.1rem;
+    }
+     
+    /* contact section */
+    .contact .input-group {
+        font-size: 1.5rem;
+    }
+
+    /* modal detail */
+    .modal-content {
+        flex-wrap: wrap;
+    }
+    .modal-content img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       /* position: absolute;
+       left: 30% */
+    }
+}
+    
+/* mobile/handphone */
+@media(max-width:450px) {
+    html {
+        font-size: 55%;
+    }
+}
